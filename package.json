@@ -1,0 +1,21 @@
+{
+  "name": "sample-docker-gitlab-ce",
+  "version": "1.0.0",
+  "description": "- ## Instrument    - run `docker-compose up`",
+  "main": "index.js",
+  "scripts": {
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "clean": "rm -rf gitlab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrParkerZ7/sample-metabase-postgre-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrParkerZ7/sample-metabase-postgre-mongo/issues"
+  },
+  "homepage": "https://github.com/MrParkerZ7/sample-metabase-postgre-mongo#readme"
+}

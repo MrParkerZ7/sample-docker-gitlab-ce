@@ -1,23 +1,17 @@
 version: '3.9'
 
 services:
-  gitlab:
-    image: gitlab/gitlab-ce:16.9.2-ce.0
-    container_name: gitlab
-    # restart: always
-    # hostname: 'gitlab.example.com'
+  gitlab-server:
+    image: gitlab/gitlab-ce:16.7.7-ce.0
+    container_name: gitlab-server
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        # Add any other gitlab.rb configuration here, each on its own line
-        external_url 'https://localhost:8088'
-        gitlab_rails['initial_root_password'] = 'abc@1234'
-        puma['worker_processes'] = 0 # disable cluster mode to avoid more memory usege
-    ports:
-      - '8088:8088'
-      # - '8443:443'
-      # - '8022:22'
+        gitlab_rails['initial_root_password'] = 'Abcd@0123456789'
+        puma['worker_processes'] = 0 # disable cluster mode to avoid more memory usage
     volumes:
-      - './gitlab/config:/etc/gitlab'
-      - './gitlab/logs:/var/log/gitlab'
-      - './gitlab/data:/var/opt/gitlab'
-    # shm_size: '256m'
+      - ./gitlab/config:/etc/gitlab
+      - ./gitlab/logs:/var/log/gitlab
+      - ./gitlab/data:/var/opt/gitlab
+    ports:
+      - '8088:80'
+      - '8443:443'
