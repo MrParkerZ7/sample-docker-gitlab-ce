@@ -10,6 +10,4 @@
   - github sample : https://github.com/lalatgithub/gitlab-in-docker
 
 - ## Tags
-  - git
-  - gitlab
-  - docker
+  - git | gitlab | docker
