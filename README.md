@@ -9,7 +9,7 @@
   - doker-image : https://hub.docker.com/r/gitlab/gitlab-ce
   - github sample : https://github.com/lalatgithub/gitlab-in-docker
 
-- ## Tag 
+- ## Tags
   - git
   - gitlab
   - docker
